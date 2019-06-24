@@ -22,7 +22,9 @@
                 <h4>Lista de Carreras</h4>
                 <br>
                 <ul v-for="item of carreras" :key="item.id" class="list-group">
-                <li class="list-group-item">{{ item.nombre }} - {{ item.telefono }}</li>
+                <li class="list-group-item">{{ item.nombre }} - {{ item.telefono }}
+                    <button v-on:click="eliminarCarrera(item)" class="btn btn-danger float-right btn-sm">Eliminar</button>
+                </li>
                 </ul>
             </div>
         </div>
@@ -48,10 +50,29 @@ export default {
     methods:{
         agregarCarrera()
         {
-            this.carreras.push({nombre: this.nombre})
-            console.log('Boton');
+            this.carreras.push({nombre: this.nombre, destino: this.destino})
+            console.log(this.carreras);
+            this.nombre=''
+            this.destino=''
+            localStorage.setItem('DataBase', JSON.stringify(this.carreras))
+        },
+        eliminarCarrera(index)
+        {
+            this.carreras.splice(index,1);   
+            console.log(this.carreras);
+            localStorage.setItem('DataBase', JSON.stringify(this.carreras))            
+        }
+    },
+    created(){
+        let DBStorage = JSON.parse(localStorage.getItem('DataBase'))
+        if(DBStorage === null){
+            this.carreras=[]
+        }
+        else{
+            this.carreras = DBStorage;
         }
     }
+
 
 }
 </script>
