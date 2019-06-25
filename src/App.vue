@@ -1,24 +1,20 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" style="width:50px; height:50px" class="mx-auto d-block">
-    <TaxisClientes /> 
-    <Taxis/>
+  <div id="app" class="p-4">
+    <TaxisClientes/> 
+    <h3 class="text-center">taxis de la empresa</h3>
+    <ListaTaxis/>
   </div>
 </template>
 
 <script>
-import TaxisClientes from './components/TaxisCliente.vue'
-import Taxis from './components/Taxis.vue'
+import TaxisClientes from './components/TaxisClientes'
+import ListaTaxis from './components/ListaTaxis'
 
 export default {
   name: 'app',
   components: {
     TaxisClientes,
-    Taxis
+    ListaTaxis
   }
 }
-
-
 </script>
-
-
