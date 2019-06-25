@@ -4,6 +4,16 @@
 ```
 npm install
 ```
+```
+npm install -g @vue/cli
+```
+
+## Create Project only in lower case letter(Directory)
+
+```
+vue create name-project
+```
+
 
 ### Compiles and hot-reloads for development
 ```
