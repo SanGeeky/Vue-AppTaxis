@@ -11,7 +11,6 @@
                 </div>
                             <!-- <ul v-for="item of taxis" :key="item.id" class="list-group">
                         <li class="list-group-item"> </li> -->
-                </ul>
             </div>
         </div>
     </div>
