@@ -42,3 +42,6 @@ npm run test:unit
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+En este trabajo se realizó con vue una aplicación para una empresa de taxis.
